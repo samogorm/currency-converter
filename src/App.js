@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         
         <Switch />
         <ConversionRate base_currency_code="USD" base_currency_rate="1" target_currency_code="GBP" target_currency_rate="0.7"/>
