@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Switch } from './shared-components/switch/Switch';
+import { ConversionRate } from './shared-components/conversion-rate/ConversionRate';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         
         <Switch />
+        <ConversionRate base_currency_code="USD" base_currency_rate="1" target_currency_code="GBP" target_currency_rate="0.7"/>
       </header>
     </div>
   );
