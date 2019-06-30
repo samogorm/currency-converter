@@ -1,0 +1,33 @@
+.switch {
+    height: 70px;
+    width: 70px;
+    display: flex;
+    background-image: linear-gradient(180deg, #AEE2C2 0%, #7CCC9B 100%);
+    box-shadow: 0 4px 12px 0 rgba(124,204,155,0.21);
+    border-radius: 50px;
+    justify-content: center;
+    transition: all .5s ease-in-out;
+}
+
+.switch:hover {
+    background-image: linear-gradient(180deg, #7BDBA0 0%, #48A16B 100%);
+    transition: all .5s ease-in-out;
+    box-shadow: 0 4px 12px 0 rgba(88, 161, 116, 0.21);
+    cursor: pointer;
+}
+
+.switch > img {
+    height: auto;
+    width: 15px;
+    margin: 0 1px;
+}
+
+.switch:hover > img:first-child {
+    transform: translateY(2px);
+    transition: all .2s ease-in-out;
+}
+
+.switch:hover > img:last-child {
+    transform: translateY(-2px);
+    transition: all .2s ease-in-out;
+}

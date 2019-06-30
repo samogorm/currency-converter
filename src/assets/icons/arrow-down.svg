@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="21px" viewBox="0 0 14 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>arrow-down</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-1212.000000, -544.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="App" transform="translate(369.000000, 299.000000)">
+                <g id="Alternate" transform="translate(822.000000, 216.000000)">
+                    <g id="arrow-down" transform="translate(28.000000, 39.500000) scale(-1, 1) translate(-28.000000, -39.500000) translate(21.000000, 29.000000)">
+                        <path d="M13.0622853,12.4332646 L13.7739867,13.1716902 C14.0753378,13.4843569 14.0753378,13.9899457 13.7739867,14.2992862 L7.54499657,20.7655 C7.24364552,21.0781667 6.75635448,21.0781667 6.4582093,20.7655 L0.226013281,14.2992862 C-0.0753377605,13.9866194 -0.0753377605,13.4810307 0.226013281,13.1716902 L0.937714678,12.4332646 C1.24227158,12.1172716 1.73918022,12.1239241 2.0373254,12.4465695 L5.71765514,16.4546908 L5.71765514,0.762143632 C5.71765514,0.31975349 6.03182963,0 6.4582093,0 L7.54499657,0 C7.97137623,0 8.28234486,0.31975349 8.28234486,0.762143632 L8.28234486,16.4546908 L11.9626746,12.4465695 C12.2608198,12.1205979 12.7577284,12.1139454 13.0622853,12.4332646 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
