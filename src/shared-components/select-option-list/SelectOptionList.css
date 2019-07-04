@@ -7,6 +7,11 @@
 
 .select-option--selected {
     background: #E3E3E3;
+    transition: all .5s ease-in-out;
+}
+
+.select-option--selected:hover {
+    box-shadow: 0 15px 25px 0 rgba(62, 64, 80, 0.15),0 2px 14px 0 rgba(62, 64, 80,.2);
 }
 
 .select-option-list-dropdown {
