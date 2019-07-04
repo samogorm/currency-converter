@@ -1,27 +1,39 @@
-.select-option--selected {
-    background: #E3E3E3;
-    border-radius: 50px;
+.select-option {
+    background: #FFF;
     display: flex;
     width: 100%;
     align-items: center;
     border: none;
-    padding: 5px 25px;
+    padding: 8px 12px;
     justify-content: space-between;
 }
 
-.select-option--selected > .button-left {
+.select-option:hover {
+    cursor: pointer;
+    background: #E3E3E3;
+    transition: background .2s ease-in-out;
+}
+
+.select-option > .button-left {
     display: flex;
     width: 100%;
     align-items: center;
 }
 
-.select-option--selected > .button-left > .country-flag {
+.select-option > .button-left > .country-flag {
     height: 30px;
     width: 30px;
     margin-right: 10px;
+    transition: all .5s ease-in-out;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 
-.select-option--selected > .button-left > span {
+.select-option:hover > .button-left >.country-flag {
+    transform: rotateY(180deg);
+}
+
+.select-option > .button-left > span {
     font-weight: bold;
     font-size: 14px;
     color: #06080C;

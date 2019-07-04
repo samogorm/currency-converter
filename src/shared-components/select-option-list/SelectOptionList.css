@@ -1,0 +1,19 @@
+.select-option-list {
+    background: #E3E3E3;
+    border-radius: 5px;
+    padding: 1px;
+    min-width: 300px;
+}
+
+.select-option--selected {
+    background: #E3E3E3;
+}
+
+.select-option-list-dropdown {
+    background: #E3E3E3;
+    transition: background .2s ease-in-out;
+}
+
+.select-option-list-dropdown--closed {
+    display: none;
+}
