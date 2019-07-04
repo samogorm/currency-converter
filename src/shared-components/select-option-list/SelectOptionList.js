@@ -119,7 +119,10 @@ class SelectOptionList extends Component {
      * @var {Object} value the object passed from the child.
      */
     _captureOptionValue = (value) => {
-        this.setState({selectedOption: value});
+        this.setState({
+            selectedOption: value, 
+            isDropdownToggled: false
+        });
     }
 
 }

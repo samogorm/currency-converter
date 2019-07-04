@@ -20,14 +20,15 @@
     height: auto;
     width: 15px;
     margin: 0 1px;
+    transition: all .5s ease-in-out;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 
 .switch:hover > img:first-child {
-    transform: translateY(2px);
-    transition: all .2s ease-in-out;
+    transform: rotateY(180deg);
 }
 
 .switch:hover > img:last-child {
-    transform: translateY(-2px);
-    transition: all .2s ease-in-out;
+    transform: rotateY(180deg);
 }
