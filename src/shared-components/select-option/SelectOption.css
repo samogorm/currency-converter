@@ -1,0 +1,30 @@
+.select-option--selected {
+    background: #E3E3E3;
+    border-radius: 50px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    border: none;
+    padding: 5px 25px;
+    justify-content: space-between;
+}
+
+.select-option--selected > .button-left {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.select-option--selected > .button-left > .country-flag {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+
+.select-option--selected > .button-left > span {
+    font-weight: bold;
+    font-size: 14px;
+    color: #06080C;
+    letter-spacing: 0.2px;
+    line-height: 24px;
+}

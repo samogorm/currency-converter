@@ -4,6 +4,7 @@ import './App.css';
 import { Switch } from './shared-components/switch/Switch';
 import { ConversionRate } from './shared-components/conversion-rate/ConversionRate';
 import { CurrencyValue } from './shared-components/currency-value/CurrencyValue';
+import SelectOption from './shared-components/select-option/SelectOption';
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
         <Switch />
         <ConversionRate base_currency_code="USD" base_currency_rate="1" target_currency_code="GBP" target_currency_rate="0.7"/>
         <CurrencyValue currency_value="1,520" />
+
+        <SelectOption key="1" currency_code="EUR" country="Europe" currency="Euro" />
       </header>
     </div>
   );

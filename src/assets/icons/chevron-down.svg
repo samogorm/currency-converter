@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="10px" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-739.000000, -359.000000)" fill="#06080C" fill-rule="nonzero">
+            <g id="App" transform="translate(369.000000, 299.000000)">
+                <g id="Currency-One" transform="translate(51.000000, 34.000000)">
+                    <g id="Currency-One-Info">
+                        <g id="USD-Select">
+                            <g id="chevron-down" transform="translate(319.000000, 26.000000)">
+                                <path d="M7.37820839,9.73476524 L0.257566927,2.40132043 C-0.0858556424,2.04763635 -0.0858556424,1.47422515 0.257566927,1.12057881 L1.08807577,0.265254261 C1.43091211,-0.0878260665 1.98655099,-0.0885052848 2.3301934,0.263744887 L8.00001832,6.07562744 L13.6698066,0.263744887 C14.013449,-0.0885052848 14.5690879,-0.0878260665 14.9119242,0.265254261 L15.7424331,1.12057881 C16.0858556,1.47426288 16.0858556,2.04767409 15.7424331,2.40132043 L8.62182825,9.73476524 C8.27840568,10.0884116 7.72163096,10.0884116 7.37820839,9.73476524 Z" id="Path"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
