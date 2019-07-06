@@ -1,6 +1,7 @@
 .conversion-rate > h6 {
     font-size: 14px;
-    color: #BABABA;
+    color: rgb(153, 152, 152);
     letter-spacing: 0.2px;
-    font-weight: 400;
+    font-weight: 600;
+    margin: 0 !important;
 }

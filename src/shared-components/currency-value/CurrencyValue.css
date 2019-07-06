@@ -1,6 +1,8 @@
-.currency-value > h3 {
+.currency-value > input {
     font-size: 50px;
     color: #06080C;
     letter-spacing: 0.67px;
     font-weight: 600;
+    margin: 25px 0 0 0;
+    border: none;
 }

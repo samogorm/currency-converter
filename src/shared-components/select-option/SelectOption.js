@@ -3,12 +3,6 @@ import React, { Component } from 'react';
 import './SelectOption.css';
 
 class SelectOption extends Component {
-    constructor(props) {
-        super(props);
-
-        this._passSelectedValueBackToParent = this._passSelectedValueBackToParent.bind(this);
-    }
-
     render() {
         return(
             <button key={this.props.id} className="select-option" type="button" onClick={() => this._passSelectedValueBackToParent({ country: this.props.country, currency_code: this.props.currency_code, currency: this.props.currency})}>

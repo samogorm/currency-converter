@@ -3,6 +3,7 @@
     border-radius: 5px;
     padding: 1px;
     min-width: 300px;
+    position: relative;
 }
 
 .select-option--selected {
@@ -17,6 +18,12 @@
 .select-option-list-dropdown {
     background: #E3E3E3;
     transition: background .2s ease-in-out;
+    position: absolute;
+    width: 100%;
+    box-shadow: 0 15px 25px 0 rgba(62, 64, 80, 0.15),0 2px 14px 0 rgba(62, 64, 80,.2);
+    z-index: 20;
+    overflow-y: auto;
+    max-height: 200px;
 }
 
 .select-option-list-dropdown--closed {

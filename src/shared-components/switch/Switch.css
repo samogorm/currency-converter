@@ -32,3 +32,11 @@
 .switch:hover > img:last-child {
     transform: rotateY(180deg);
 }
+
+.switch > span {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    align-self: center;
+    text-transform: uppercase;
+}

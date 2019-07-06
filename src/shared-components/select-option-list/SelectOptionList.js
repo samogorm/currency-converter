@@ -10,38 +10,8 @@ class SelectOptionList extends Component {
 
         this.state = {
             selectedOption: null,
-            options: [
-                {
-                    country: 'Canada',
-                    currency: 'Canadian Dollar',
-                    code: 'CAD',
-                    number: 124,
-                    country_flag: 'Canada',
-                    archived: false
-                },
-                {
-                    country: 'Hong Kong',
-                    currency: 'Hong Kong Dollar',
-                    code: 'HKD',
-                    number: 344,
-                    archived: false
-                },
-                {
-                    country: 'Iceland',
-                    currency: 'Iceland Krona',
-                    code: 'ISK',
-                    number: 352,
-                    archived: false
-                },
-                {
-                    country: 'The Philippines',
-                    currency: 'Philippine Peso',
-                    code: 'PHP',
-                    number: 608,
-                    archived: false
-                }
-            ],
-            isDropdownToggled: false
+            isDropdownToggled: false,
+            requestHasError: null
         }
 
         this._renderSelectedOption = this._renderSelectedOption.bind(this);
@@ -94,10 +64,10 @@ class SelectOptionList extends Component {
      * Renders the option list.
      */
     _renderOptions = () => {
-        let options = this.state.options;
+        let options = this.props.options;
 
         if(options.length > 0) {
-            return options.map((option, index)=> {
+            return options.map((option, index) => {
                 if(this.state.selectedOption === null || this.state.selectedOption.currency_code !== option.code) {
                     return(
                         <SelectOption 
