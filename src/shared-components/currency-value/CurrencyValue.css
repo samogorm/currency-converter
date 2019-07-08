@@ -1,8 +1,15 @@
-.currency-value > input {
+.currency-value > input, h3 {
     font-size: 50px;
     color: #06080C;
     letter-spacing: 0.67px;
     font-weight: 600;
     margin: 25px 0 0 0;
     border: none;
+    width: 100%;
+    transition: all .5s ease-in-out;
+}
+
+.currency-value > input:focus {
+    outline: none;
+    border-bottom: 1px solid #06080C;
 }

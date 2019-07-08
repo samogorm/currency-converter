@@ -17,16 +17,33 @@ class CurrencyValue extends Component {
             <div className="currency-value">
                 <input
                     value={this.state.currencyValue === '' ? '' : this.state.currencyValue}
-                    // placeholder={isReadOnly === true ? '' : 'Enter currency...'}
+                    placeholder={this.props.isReadOnly === true ? '' : '0'}
                     readOnly={this.props.isReadOnly}
-                    onChange={(e) => this._setCurrencyValue(e.target.value)}
+                    onChange={
+                        (e) => {
+                            this._setCurrencyValue(e.target.value);
+                            this._passValueToParent(e.target.value);
+                        }
+                    }
                 />
             </div>
         )
     }
 
-    _setCurrencyValue = (value) => {
-        this.setState({currencyValue: value});
-    }
+    /**
+     * Sets the currency value.
+     * 
+     * @var {any} value the value.
+     */
+    _setCurrencyValue = (value) => this.setState({currencyValue: value});
+
+    /**
+     * Passes the value to the parent component via props.
+     * 
+     * @var {any} value the input value.
+     */
+    _passValueToParent = (value) => {
+        this.props.getCurrencyValue(value);
+    };
 }
 export default CurrencyValue;

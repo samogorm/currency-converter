@@ -6,6 +6,7 @@
     border: none;
     padding: 8px 12px;
     justify-content: space-between;
+    height: 48px;
 }
 
 .select-option:hover {

@@ -93,6 +93,8 @@ class SelectOptionList extends Component {
             selectedOption: value, 
             isDropdownToggled: false
         });
+
+        this.props.passSelectedCurrency(value);
     }
 
 }
