@@ -88,8 +88,6 @@ class CurrencyConverter extends Component {
             exchangeRate = exchangeRate.toFixed(2);
         }
 
-        console.log("the exchange rate: ", exchangeRate);
-
         if (baseCurrency !== null && targetCurrency !== null && exchangeRate !== null) {
             switch(type) {
                 case 'base':
@@ -115,6 +113,11 @@ class CurrencyConverter extends Component {
         });
     }
 
+    /**
+     * Calculates the exchange value.
+     * 
+     * @var {any} targetCurrency the target currency.
+     */
     _calculateExchangeValue = (targetCurrency) => {
         let exchangeRates = this.state.exchangeRates.rates;
         let rate = exchangeRates[`${targetCurrency.currency_code}`];

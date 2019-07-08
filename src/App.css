@@ -4,8 +4,44 @@
 
 .app-body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-content: center;
   background: #1e272e;
   height: 100vh;
+}
+
+.app-body > .header {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.app-body > .header > h4 {
+  font-weight: 900;
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}
+
+.app-body > .special-thanks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.app-body > .special-thanks > span {
+  color: #fff;
+  font-weight: 900;
+  font-size: 22px;
+}
+
+.app-body > .special-thanks ul li {
+  color: rgba(255, 255, 255, 0.877);
+  margin: 5px 0;
+  list-style: none;
+}
+
+.app-body > .special-thanks a {
+  color: #AEE2C2;
 }
