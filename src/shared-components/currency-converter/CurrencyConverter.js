@@ -38,7 +38,6 @@ class CurrencyConverter extends Component {
                         <CurrencyValue isReadOnly={false} getCurrencyValue={this._getBaseCurrencyValue} />
                    </div>
                 </div>
-                <div className="divider"></div>
                 <div className="target-currency">
                     <div className="currency-info">
                         <SelectOptionList type="target" options={this.state.currencyInformation} passSelectedCurrency={this._setSelectedTargetCurrency}/>
@@ -49,7 +48,6 @@ class CurrencyConverter extends Component {
                         {this._renderCurrencyExchangeValue()}
                     </div>
                 </div>
-                <Switch />
             </div>
         )
     }
@@ -85,15 +83,24 @@ class CurrencyConverter extends Component {
         let targetCurrency = this.state.targetCurrency;
         let exchangeRate = this.state.currentExchangeRate;
 
-        if (exchangeRate !== null) exchangeRate = exchangeRate.toFixed(2);
+        if (exchangeRate !== null) {
+            if(type === 'target') exchangeRate = 1 / exchangeRate;
+            exchangeRate = exchangeRate.toFixed(2);
+        }
 
-        switch(type) {
-            case 'base':
-                if (baseCurrency !== null && targetCurrency !== null && exchangeRate !== null) {
+        console.log("the exchange rate: ", exchangeRate);
+
+        if (baseCurrency !== null && targetCurrency !== null && exchangeRate !== null) {
+            switch(type) {
+                case 'base':
                     return (
                         <ConversionRate base_currency_code={baseCurrency.currency_code} base_currency_rate="1" target_currency_code={targetCurrency.currency_code} target_currency_rate={exchangeRate} />
                     )
-                }
+                case 'target':
+                    return (
+                        <ConversionRate base_currency_code={targetCurrency.currency_code} base_currency_rate="1" target_currency_code={baseCurrency.currency_code} target_currency_rate={exchangeRate / 1} />
+                    )
+            }
         }
 
         return null;
@@ -122,7 +129,7 @@ class CurrencyConverter extends Component {
 
     _renderCurrencyExchangeValue = () => {
         return(
-            <h3>{this.state.targetCurrencyOutput !== null ? this.state.targetCurrencyOutput : '0'}</h3>
+            <h3>{this.state.targetCurrencyOutput !== null ? this.state.targetCurrencyOutput : '0.00'}</h3>
         )
     }
 

@@ -17,7 +17,7 @@ class CurrencyValue extends Component {
             <div className="currency-value">
                 <input
                     value={this.state.currencyValue === '' ? '' : this.state.currencyValue}
-                    placeholder={this.props.isReadOnly === true ? '' : '0'}
+                    placeholder={this.props.isReadOnly === true ? '' : '0.00'}
                     readOnly={this.props.isReadOnly}
                     onChange={
                         (e) => {

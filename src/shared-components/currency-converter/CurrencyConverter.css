@@ -24,6 +24,7 @@
 .currency-value {
     display: flex;
     justify-content: left;
+    width: 100%;
 }
 
 .divider {
