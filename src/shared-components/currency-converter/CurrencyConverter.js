@@ -17,7 +17,8 @@ class CurrencyConverter extends Component {
             exchangeRates: [],
             baseCurrencyInput: '',
             targetCurrencyOutput: null,
-            currentExchangeRate: null
+            currentExchangeRate: null,
+            validationError: false
         }
     }
 
@@ -33,8 +34,11 @@ class CurrencyConverter extends Component {
                         <SelectOptionList type="base" options={this.state.currencyInformation} passSelectedCurrency={this._setSelectedBaseCurrency} />
                         {this._renderCurrencyValue('base')}
                     </div>
-                   <div className="currency-value">
+                    <div className="currency-value">
                         <CurrencyValue isReadOnly={false} getCurrencyValue={this._getBaseCurrencyValue} />
+                        <div className={`error-message ${this.state.validationError ? 'error-message--show' : 'error-message--hide'}`}>
+                            <span>Please enter a valid number.</span>
+                        </div>
                    </div>
                 </div>
                 <div className="target-currency">
@@ -107,9 +111,26 @@ class CurrencyConverter extends Component {
      * Gets the base currency input.
      */
     _getBaseCurrencyValue = (value) => {
-        this.setState({
-            baseCurrencyInput: value
-        });
+        if(value === '') { 
+            value = 0.00
+        };
+
+        if(!isNaN(value)) {
+            this.setState({
+                baseCurrencyInput: Number(value),
+                validationError: false
+            });
+
+
+            if (this.state.targetCurrency !== null) {
+                this._calculateExchangeValue(this.state.targetCurrency);
+            }
+        } else if(isNaN(value)) {
+            // show an error message.
+            this.setState({
+                validationError: true
+            })
+        }
     }
 
     /**
@@ -121,7 +142,7 @@ class CurrencyConverter extends Component {
         let exchangeRates = this.state.exchangeRates.rates;
         let rate = exchangeRates[`${targetCurrency.currency_code}`];
         let calculatedExchangeRate = this.state.baseCurrencyInput * rate;
-
+    
         // Set states.
         this.setState({
             currentExchangeRate: rate,
@@ -130,8 +151,10 @@ class CurrencyConverter extends Component {
     }
 
     _renderCurrencyExchangeValue = () => {
+        let base = this.state.baseCurrencyInput;
+        let target = this.state.targetCurrencyOutput;
         return(
-            <h3>{this.state.targetCurrencyOutput !== null ? this.state.targetCurrencyOutput : '0.00'}</h3>
+            <h3>{target !== null && base !== 0.00 && base !== 0 && base !== '' ? target : '0.00'}</h3>
         )
     }
 

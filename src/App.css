@@ -28,6 +28,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 40px;
+  text-align: center;
 }
 
 .app-body > .special-thanks > span {

@@ -23,6 +23,7 @@
 
 .currency-value {
     display: flex;
+    flex-direction: column;
     justify-content: left;
     width: 100%;
 }
@@ -32,6 +33,18 @@
     height: 1px;
     background: #d1d2d3;
     margin: 20px 0;
+}
+
+.error-message {
+    margin-bottom: 20px;
+}
+
+.error-message > span {
+    color: #FF0040;
+}
+
+.error-message--hide {
+    display: none;
 }
 
 
