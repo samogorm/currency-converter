@@ -43,11 +43,10 @@ class CurrencyConverter extends Component {
                 </div>
                 <div className="target-currency">
                     <div className="currency-info">
-                        <SelectOptionList type="target" options={this.state.currencyInformation} passSelectedCurrency={this._setSelectedTargetCurrency}/>
+                        {this._renderTargetCurrencyList()}
                         {this._renderCurrencyValue('target')}
                     </div>
                     <div className="currency-value">
-                        {/* <CurrencyValue currency_value="1,520" isReadOnly={true}/> */}
                         {this._renderCurrencyExchangeValue()}
                     </div>
                 </div>
@@ -107,6 +106,20 @@ class CurrencyConverter extends Component {
         return null;
     }
 
+    _renderTargetCurrencyList = () => {
+        if(this.state.baseCurrency !== null) {
+            return(
+                <SelectOptionList type="target" options={this.state.currencyInformation} passSelectedCurrency={this._setSelectedTargetCurrency} />
+            )
+        } else {
+            return(
+                <span>
+                    Please choose a base currency first...
+                </span>
+            )
+        }
+    }
+
     /**
      * Gets the base currency input.
      */
@@ -150,6 +163,9 @@ class CurrencyConverter extends Component {
         })
     }
 
+    /**
+     * Renders the exhange rate value.
+     */
     _renderCurrencyExchangeValue = () => {
         let base = this.state.baseCurrencyInput;
         let target = this.state.targetCurrencyOutput;
