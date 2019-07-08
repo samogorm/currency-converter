@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import { RequestConfig } from './../../utils/RequestUtil';
-import { Switch } from './../switch/Switch';
 import { ConversionRate } from './../conversion-rate/ConversionRate';
 import CurrencyValue from './../currency-value/CurrencyValue';
 import SelectOptionList from './../select-option-list/SelectOptionList';
