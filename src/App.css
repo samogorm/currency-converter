@@ -46,10 +46,13 @@
     margin-top: 10px;
 }
 
-.app-body > .special-thanks ul li {
+.app-body > .special-thanks ul li, .app-body > .special-thanks > p {
   color: rgba(255, 255, 255, 0.877);
   margin: 5px 0;
   list-style: none;
+}
+.app-body > .special-thanks > p {
+  margin: 20px 0;
 }
 
 .app-body > .special-thanks a {

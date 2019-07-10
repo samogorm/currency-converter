@@ -24,6 +24,7 @@ function App() {
               <a href="https://exchangeratesapi.io">Exchange Rates API</a> for the exchange rates data
             </li>
           </ul>
+          <p>A web app built by <a href="https://github.com/samogorm">Samantha O'Gorman</a></p>
         </div>
       </div>
     </div>
