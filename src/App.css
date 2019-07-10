@@ -7,7 +7,13 @@
   flex-direction: column;
   align-content: center;
   background: #1e272e;
-  height: 100vh;
+  height: 100%;
+}
+
+@media screen and (min-width: 1081px) {
+  .app-body {
+    height: 100vh;
+  }
 }
 
 .app-body > .header {

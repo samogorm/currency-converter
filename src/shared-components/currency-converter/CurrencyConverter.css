@@ -1,5 +1,5 @@
 .currency-converter {
-    width: 100%;
+    width: 75%;
     background: #FFFFFF;
     box-shadow: 0 15px 25px 0 rgba(62, 64, 80, 0.15),0 2px 14px 0 rgba(62, 64, 80,.2);
     border-radius: 10px;
@@ -7,6 +7,12 @@
     max-height: 450px;
     align-self: center;
     position: relative;
+}
+
+@media screen and (min-width: 1081px) {
+    .currency-converter {
+        width: 100%;
+    }
 }
 
 .currency-converter .switch {

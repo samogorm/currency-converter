@@ -2,8 +2,14 @@
     background: #E3E3E3;
     border-radius: 5px;
     padding: 1px;
-    min-width: 300px;
+    min-width: 280px;
     position: relative;
+}
+
+@media screen and (min-width: 1081px) {
+    .select-option-list {
+        min-width: 300px;
+    }
 }
 
 .select-option--selected {
